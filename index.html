@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de dés</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light" style="font-family: 'Lato', sans-serif;"></body>
+<div class="container mt-5">
+    <div id="game" class="text-center p-4 bg-white rounded shadow">
+      <h1 class="text-primary">Jeu de Dés</h1>
+      <div id="rules" class="bg-light p-3 mb-4 rounded">
+        <h2>Règles du Jeu</h2>
+        <p>Le jeu se joue à tour de rôle entre deux joueurs.</p>
+        <p>À chaque tour, un joueur lance deux dés rouges. La somme des points des dés est ajoutée au score du joueur.</p>
+        <p>Si un joueur obtient un double 1, il perd tous ses points et le tour passe à l'autre joueur.</p>
+        <p>Si un joueur obtient un double (autre que 1-1), il a le droit de rejouer.</p>
+        <p>Le premier joueur qui atteint ou dépasse 421 points remporte la partie.</p>
+      </div>
+      <div id="playerScores" class="mb-4">
+        <div class="row">
+          <div class="col">
+            <p class="font-weight-bold">Joueur 1: <span id="score1" class="badge badge-primary">0</span></p>
+          </div>
+          <div class="col">
+            <p class="font-weight-bold">Joueur 2: <span id="score2" class="badge badge-primary">0</span></p>
+          </div>
+        </div>
+      </div>
+      <div id="diceContainer" class="mb-4">
+        <div id="dice1" class="dice bg-info text-white"></div>
+        <div id="dice2" class="dice bg-info text-white"></div>
+      </div>
+      <button onclick="rollDice()" class="btn btn-primary mr-2">Lancer les Dés</button>
+      <button onclick="startNewGame()" class="btn btn-secondary">Nouvelle Partie</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  </body>
+  </html>
